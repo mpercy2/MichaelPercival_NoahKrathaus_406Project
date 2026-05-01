@@ -94,9 +94,6 @@ contract Vault {
         token.transfer(msg.sender, amount);
         token.transfer(admin, fee); //send fee to admin
         //
-        
-        token.transfer(msg.sender, amount);
-        token.transfer(admin, fee);
 
         // you can implement revoking of governance membership here
        if (balanceOf[msg.sender] == 0 && _balanceOfmembershipToken[msg.sender] == 1) { //no bal but is a member
