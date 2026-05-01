@@ -4,7 +4,7 @@ const path = require("path");
 const app = express();
 const PORT = 3000;
 
-// Serve static files from the src folder, matching the class demo DApp structure.
+// Serve files from src dir
 app.use(express.static(path.join(__dirname, "src")));
 
 app.get("/", (req, res) => {
