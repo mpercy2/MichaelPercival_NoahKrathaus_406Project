@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tempo Vault DApp</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Tempo Vault DApp</h1>
+
+    <section class="card">
+      <h2>Wallet</h2>
+      <button id="connectButton">Connect Wallet</button>
+      <p><strong>Connected Account:</strong></p>
+      <p id="walletAddress">Not connected</p>
+    </section>
+
+    <section class="card">
+      <h2>User Balances</h2>
+      <p><strong>Tempo Token Balance:</strong> <span id="tokenBalance">0</span></p>
+      <p><strong>Vault Share Balance:</strong> <span id="vaultBalance">0</span></p>
+      <p><strong>Governance Membership:</strong> <span id="membershipStatus">Unknown</span></p>
+    </section>
+
+    <section class="card">
+      <h2>Deposit</h2>
+      <input id="depositAmount" type="number" placeholder="Amount to deposit">
+      <br>
+      <button id="approveButton">Approve Vault</button>
+      <button id="depositButton">Deposit</button>
+    </section>
+
+    <section class="card">
+      <h2>Withdraw</h2>
+      <input id="withdrawAmount" type="number" placeholder="Vault shares to withdraw">
+      <br>
+      <button id="withdrawButton">Withdraw</button>
+    </section>
+
+    <section class="card">
+      <h2>Admin Info</h2>
+      <p><strong>Admin Address:</strong></p>
+      <p id="adminAddress">Unknown</p>
+      <p><strong>Admin Token Balance:</strong> <span id="adminBalance">0</span></p>
+      <p><strong>Withdrawal Fee:</strong> <span id="feePercent">0</span></p>
+    </section>
+
+    <section class="card">
+      <button id="refreshButton">Refresh Balances</button>
+      <p id="statusMessage"></p>
+    </section>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
